@@ -1,66 +1,27 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+ M205 : Développer en back end
+<h4> TP : Laravel (Gestion de bibliothèque) </h1><br>
+<h2>Objectif : Créer une application de gestion de bibliothèque en utilisant Laravel et une base de données MySQL.</h2><br><br>
+<h3>1. Créez une base de données MySQL avec les tables suivantes: "livres", "auteurs" et "emprunts". La table "livres" doit avoir les colonnes suivantes: id, titre, année de publication, nombre de pages et auteur_id. La table "auteurs" doit avoir les colonnes suivantes: id, nom et prénom. La table "emprunts" doit avoir les colonnes suivantes: id, livre_id, date d'emprunt et date de retour.
+2. Créez un nouveau projet Laravel en utilisant la commande laravel new nom_du_projet.<br><br>
+3. Configurez les informations de connexion à la base de données dans le fichier .env.<br><br>
+4. Créez un modèle Eloquent pour chaque table en utilisant la commande php artisan make:model NomDuModele.<br><br>
+5. Créez un contrôleur "BibliothequeController" en utilisant la commande php artisan make:controller BibliothequeController.<br><br>
+6. Ajoutez des méthodes au contrôleur pour afficher la liste des livres, ajouter un nouveau livre, modifier un livre existant et supprimer un livre. Utilisez les relations entre les tables pour afficher les noms des auteurs dans la liste des livres.<br><br>
+7. Ajoutez des routes pour chaque méthode du contrôleur. Assurez-vous que les routes<br><br>
+8. Créez une vue pour afficher la liste des livres. Utilisez les fonctionnalités de pagination de Laravel pour afficher 10 livres par page.<br><br>
+9. Ajoutez une vue pour ajouter un nouveau livre avec un formulaire permettant de saisir les informations du livre.<br><br>
+10. Ajoutez une vue pour modifier un livre existant avec un formulaire pré-rempli avec les informations du livre à modifier.<br><br>
+11. Ajoutez une vue de confirmation pour supprimer un livre.<br><br>
+12. Utilisez les fonctionnalités de validation de Laravel pour valider les données saisies dans les formulaires.<br><br>
+13. Utilisez les migrations Laravel pour créer les tables dans la base de données.<br><br>
+14. Créez des relations entre les modèles pour que chaque livre appartienne à un auteur et pour que chaque emprunt soit associé à un livre.<br><br>
+15. Ajoutez des méthodes au contrôleur pour afficher la liste des auteurs, ajouter un nouvel auteur, modifier un auteur existant et supprimer un auteur.<br><br>
+16. Ajoutez des vues pour afficher la liste des auteurs, ajouter un nouvel auteur, modifier un auteur existant et supprimer un auteur.<br><br>
+17. Ajoutez des méthodes au contrôleur pour afficher la liste des emprunts, ajouter un nouvel emprunt, modifier un emprunt existant et supprimer un emprunt.<br><br>
+18. Ajoutez des vues pour afficher la liste des emprunts, ajouter un nouvel emprunt, modifier un emprunt existant et supprimer un emprunt.<br><br>
+19. Utilisez les relations entre les modèles pour afficher les informations associées aux emprunts, comme le titre du livre et le nom de l'emprunteur.<br><br>
+20. Utilisez les événements Laravel pour enregistrer l'historique des modifications apportées aux livres <br></h4><br>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
