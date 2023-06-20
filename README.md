@@ -3,7 +3,7 @@
  M205 : Développer en back end
 <h1> TP : Laravel (Gestion de bibliothèque) </h1><br>
 <h2>Objectif : Créer une application de gestion de bibliothèque en utilisant Laravel et une base de données MySQL.</h2><br>
-1. Créez une base de données MySQL avec les tables suivantes: "livres", "auteurs" et "emprunts". La table "livres" doit avoir les colonnes suivantes: id, titre, année de publication, nombre de pages et auteur_id. La table "auteurs" doit avoir les colonnes suivantes: id, nom et prénom. La table "emprunts" doit avoir les colonnes suivantes: id, livre_id, date d'emprunt et date de retour.
+<h3>1. Créez une base de données MySQL avec les tables suivantes: "livres", "auteurs" et "emprunts". La table "livres" doit avoir les colonnes suivantes: id, titre, année de publication, nombre de pages et auteur_id. La table "auteurs" doit avoir les colonnes suivantes: id, nom et prénom. La table "emprunts" doit avoir les colonnes suivantes: id, livre_id, date d'emprunt et date de retour.
 2. Créez un nouveau projet Laravel en utilisant la commande laravel new nom_du_projet.<br>
 3. Configurez les informations de connexion à la base de données dans le fichier .env.<br>
 4. Créez un modèle Eloquent pour chaque table en utilisant la commande php artisan make:model NomDuModele.<br>
@@ -22,6 +22,6 @@
 17. Ajoutez des méthodes au contrôleur pour afficher la liste des emprunts, ajouter un nouvel emprunt, modifier un emprunt existant et supprimer un emprunt.<br>
 18. Ajoutez des vues pour afficher la liste des emprunts, ajouter un nouvel emprunt, modifier un emprunt existant et supprimer un emprunt.<br>
 19. Utilisez les relations entre les modèles pour afficher les informations associées aux emprunts, comme le titre du livre et le nom de l'emprunteur.<br>
-20. Utilisez les événements Laravel pour enregistrer l'historique des modifications apportées aux livres <br>
+20. Utilisez les événements Laravel pour enregistrer l'historique des modifications apportées aux livres <br></h3>
 
 
