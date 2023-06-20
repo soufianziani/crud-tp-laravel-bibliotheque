@@ -11,19 +11,18 @@ class BibliothequeController extends Controller
     public function affichage(){
 
         // $livre=livres::all();
-        $livre=livres::OrderBy('id', 'asc')->paginate(2);
+        $livre=livres::paginate(2);
         return view('pages.affichage' , compact('livre'));
     }
     public function affichage_auteurs(){
 
         // $livre=livres::all();
-        $auteur=auteurs::OrderBy('id', 'asc')->get();
-        return view('pages.affichage_auteurs' , compact('auteur'));
+        $auteur=livres::OrderBy('id', 'asc')->paginate(2);
+        return view('pages.affichage' , compact('livre'));
     }
 
     public function create(){
-        $auteur = auteurs::all();
-        return view('pages.create', compact('auteur'));
+        return view('pages.create');
     }
 
     public function store(Request $request){
